@@ -8,20 +8,40 @@
 	<link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/pure-min.css">
 	<link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/grids-responsive-min.css">
 	<link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/blog.css">
+	<link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/monokai.css">
 </head>
 <body>
 <div id="layout" class="pure-g">
 	<div class="sidebar pure-u-1 pure-u-md-1-4">
 		<div class="header">
-			<h1 class="brand-title">Orange Blog</h1>
+			<h1 class="brand-title"><a href="/">Orange Blog</a></h1>
 			<h2 class="brand-tagline">Snow Memory</h2>
 			<nav class="nav">
 				<ul class="nav-list">
+					<li class="nav-item">
+						<a class="button-success pure-button" href="/">Home</a>
+					<li>
+					<li class="nav-item">
+                        <a class="button-success pure-button" href="{% url "archives" %}">Archive</a>
+                    <li>
 					<li class="nav-item">
 						<a class="pure-button" href="https://github.com/OrangeLittleOrdinaryy">Github</a>
 					</li>
 					<li class="nav-item">
 						<a class="pure-button" href="http://weibo.com/u/3121067932">Weibo</a>
+					</li>
+					<li class="nav-item">
+                        <a class="button-success pure-button" href="/">Pages</a>
+                    <li>
+					<li class="nav-item">
+						<form class="pure-form" action="/search/" method="get">
+						<input class="pure-input-3-3" type="text" name="s" placeholder="search">
+					</li>
+					<li class="nav-item">
+                        <a class="button-success pure-button" href="{% url "about_me" %}">About Me</a>
+                    <li>
+					<li>
+						<a class="button-success pure-button" href="{% url "RSS" %}">RSS</a>
 					</li>
 				</ul>
 			</nav>
